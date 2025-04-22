@@ -88,6 +88,28 @@
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.2);
       box-shadow: 0 0 15px #33ff77;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .terminal-box::before {
+      content: "user@localhost:~$";
+      color: #00ff88;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .terminal-line {
+      display: block;
+      animation: typewriter 1.2s steps(40, end) 1;
+      white-space: pre-wrap;
+      overflow: hidden;
+    }
+
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
     }
   </style>
 </head>
@@ -107,7 +129,7 @@
     <section id="about" class="active">
       <h2><span id="header-about"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
-        <p>
+        <p class="terminal-line">
           I’m <span class="highlight">Your Name</span>, a cybersecurity consultant with strong skills in penetration testing, red teaming, and vulnerability management. I enjoy solving complex problems and continuously learning through real-world experience and CTF competitions.
         </p>
       </div>
@@ -117,9 +139,9 @@
       <h2><span id="header-experience"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
         <ul>
-          <li><strong>Security Consultant</strong> @ Telecom Co. (2023 - Present)</li>
-          <li><strong>Web Developer</strong> @ Myanmar Co., Ltd. (2022)</li>
-          <li><strong>CTF Team Co-founder</strong> & National Representative – ASEAN-Japan Cyber SEA Games</li>
+          <li class="terminal-line"><strong>Security Consultant</strong> @ Telecom Co. (2023 - Present)</li>
+          <li class="terminal-line"><strong>Web Developer</strong> @ Myanmar Co., Ltd. (2022)</li>
+          <li class="terminal-line"><strong>CTF Team Co-founder</strong> & National Representative – ASEAN-Japan Cyber SEA Games</li>
         </ul>
       </div>
     </section>
@@ -128,10 +150,10 @@
       <h2><span id="header-projects"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
         <ul>
-          <li>Monthly Top 10 @ HackTheBox / TryHackMe</li>
-          <li>Security awareness trainer for 500+ employees</li>
-          <li>Built and maintained Python-based recon tools</li>
-          <li>Joined MetaCTF, Advent of Cyber, internal red team ops</li>
+          <li class="terminal-line">Monthly Top 10 @ HackTheBox / TryHackMe</li>
+          <li class="terminal-line">Security awareness trainer for 500+ employees</li>
+          <li class="terminal-line">Built and maintained Python-based recon tools</li>
+          <li class="terminal-line">Joined MetaCTF, Advent of Cyber, internal red team ops</li>
         </ul>
       </div>
     </section>
@@ -139,10 +161,10 @@
     <section id="contact">
       <h2><span id="header-contact"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
-        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-        <p><a href="Your_Resume.pdf" target="_blank">📄 Download My Resume (PDF)</a></p>
+        <p class="terminal-line">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p class="terminal-line">GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+        <p class="terminal-line">LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+        <p class="terminal-line"><a href="Your_Resume.pdf" target="_blank">📄 Download My Resume (PDF)</a></p>
       </div>
     </section>
 
