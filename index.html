@@ -229,9 +229,9 @@
 	  function typeCommand(id, command, callback) {
 		const el = document.getElementById(`cmd-${id}`);
 		let i = 0;
-		el.textContent = "user@localhost:~$ ";
+		el.textContent = "root@gracemainland:~# ";
 		const interval = setInterval(() => {
-		  el.textContent = "user@localhost:~$ " + command.slice(0, i);
+		  el.textContent = "root@gracemainland:~# " + command.slice(0, i);
 		  i++;
 		  if (i > command.length) {
 			clearInterval(interval);
