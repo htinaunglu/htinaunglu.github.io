@@ -101,7 +101,6 @@
 
     .terminal-line {
       display: block;
-      white-space: pre-wrap;
       overflow: hidden;
       opacity: 0;
       visibility: hidden;
@@ -134,12 +133,10 @@
 	.terminal-line {
 	display: block;
 	visibility: hidden;
-	white-space: pre-wrap;
 	}
 	.terminal-line {
     display: block;
     visibility: hidden;
-    white-space: pre-wrap;
 	}
 
   </style>
@@ -150,10 +147,10 @@
     <header>
       <h1>&gt; htinaunglu@mui0:~$</h1>
       <nav>
-        <a onclick="showSection('about', '> WHOAMI', 'whoami')">ABOUT</a>
-        <a onclick="showSection('experience', '> EXPERIENCE', 'cat /usr/experience')">EXPERIENCE</a>
-        <a onclick="showSection('projects', '> ACTIVITY', 'show /etc/activities')">ACTIVITY</a>
-        <a onclick="showSection('contact', '> CONTACT', 'ping myname -c 1337')">CONTACT</a>
+        <a onclick="showSection('about', '> ABOUT', 'whoami')">ABOUT</a>
+        <a onclick="showSection('experience', '> EXPERIENCE', 'history')">EXPERIENCE</a>
+        <a onclick="showSection('projects', '> ACTIVITY', 'ps -aux')">ACTIVITY</a>
+        <a onclick="showSection('contact', '> CONTACT', 'nc mui0.dc0 1337')">CONTACT</a>
       </nav>
     </header>
 
@@ -161,9 +158,9 @@
       <h2><span class="header" id="header-about"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
         <div id="cmd-about" class="command-line"></div>
-        <p class="terminal-line">
+        <li class="terminal-line">
           I’m <span class="highlight">Htin Aung Lu</span>, also known as <span class="highlight">"Mui0"</span> in the cybersecurity field, a cybersecurity consultant with strong skills in penetration testing, red teaming, and vulnerability management. I enjoy solving complex problems and continuously learning through real-world experience and CTF competitions. I am also active on Hackthebox and Tryhackme! Recently, I even get Platinum tier on HTB's season 7 "VICE".
-        </p>
+        </li>
       </div>
     </section>
 
@@ -171,11 +168,11 @@
       <h2><span class="header" id="header-experience"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
         <div id="cmd-experience" class="command-line"></div>
-        <ul>
-          <li class="terminal-line"><strong>Security Consultant (Securelife)</strong> @ MPT-KSGM Joint Operations.</li>
-          <li class="terminal-line"><strong>Backend Developement and Operation</strong> @ EngineerForce Inc.</li>
-          <li class="terminal-line"><strong>CTF Team Co-founder</strong> & MDY-L33ts.</li>
-        </ul>
+          <p class="terminal-line"><strong>Security Consultant (Securelife)</strong> @ MPT-KSGM Joint Operations. (2024-2025)</p>
+          <p class="terminal-line"><strong>Backend Developement and Operation</strong> @ EngineerForce Inc. (2023)</p>
+		  <p class="terminal-line"><strong>Network and Security Operation Engineer</strong> @ GoldenLink Co., Ltd. (2022-2023)</p>
+		  <p class="terminal-line"><strong>Machine Learning Engineer</strong> @ Andfun Yangon Co., Ltd. (2022)</p>
+          <p class="terminal-line"><strong>Co-founder</strong> @ MDY-L33ts(<a href="https://leetdev.net/">LeetDev</a>). (2016) </p>
       </div>
     </section>
 
@@ -183,12 +180,10 @@
       <h2><span class="header" id="header-projects"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
         <div id="cmd-projects" class="command-line"></div>
-        <ul>
-          <p class="terminal-line"><a>Local Top 3 @ HackTheBox</a></p>
-          <p class="terminal-line">Security awareness trainer for 4000+ employees</p>
-          <p class="terminal-line">Built and maintained Python-based recon tools</p>
-          <p class="terminal-line">Joined MetaCTF, Advent of Cyber, internal red team ops</p>
-        </ul>
+          <p class="terminal-line"><a>Local Top 3 @ HackTheBox.</a></p>
+          <p class="terminal-line">Phishing awareness Campaign and Enterprise Security awareness training for 4000+ employees.</p>
+          <p class="terminal-line">Built and maintained Python-based recon tools.</p>
+          <p class="terminal-line">Joined Seasonal HTB Competitions, MetaCTF, Advent of Cyber, internal red team ops.</p>
       </div>
     </section>
 
@@ -196,15 +191,14 @@
       <h2><span class="header" id="header-contact"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
         <div id="cmd-contact" class="command-line"></div>
-        <p class="terminal-line">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p class="terminal-line">Email: <a href="">noeXposed</a></p>
         <p class="terminal-line">GitHub: <a href="https://github.com/htinaunglu" target="_blank">github.com/htinaunglu</a></p>
         <p class="terminal-line">LinkedIn: <a href="https://linkedin.com/in/htinaunglu" target="_blank">linkedin.com/in/htinaunglu</a></p>
-
       </div>
     </section>
 
     <div class="footer">
-      &copy; 2025 © Mustala — Built with 💔
+      &copy; 2025 Mustala — Built with 💔
     </div>
   </div>
 
