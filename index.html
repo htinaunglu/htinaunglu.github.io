@@ -83,6 +83,9 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
+	.cmd-prefix {
+      color: red;
+    }
 
     .terminal-box {
       border: 2px solid #33ff77;
@@ -229,9 +232,9 @@
 	  function typeCommand(id, command, callback) {
 		const el = document.getElementById(`cmd-${id}`);
 		let i = 0;
-		el.textContent = "root@gracemainland:~# ";
+		el.innerHTML = '<span class="cmd-prefix">root@gracemainland:~# </span>';
 		const interval = setInterval(() => {
-		  el.textContent = "root@gracemainland:~# " + command.slice(0, i);
+		el.innerHTML = '<span class="cmd-prefix">root@gracemainland:~# </span>' + command.slice(0, i);
 		  i++;
 		  if (i > command.length) {
 			clearInterval(interval);
