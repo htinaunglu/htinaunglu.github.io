@@ -92,118 +92,187 @@
       overflow: hidden;
     }
 
-    .terminal-box::before {
-      content: "user@localhost:~$";
+    .command-line {
       color: #00ff88;
       font-weight: bold;
-      display: block;
       margin-bottom: 10px;
+      white-space: pre;
     }
 
     .terminal-line {
       display: block;
-      animation: typewriter 1.2s steps(40, end) 1;
       white-space: pre-wrap;
       overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
     }
 
-    @keyframes typewriter {
-      from { width: 0; }
-      to { width: 100%; }
+    section.active .terminal-line {
+      opacity: 1;
+      visibility: visible;
     }
+
+    .header {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    section.active .header {
+      opacity: 1;
+      visibility: visible;
+    }
+	    .header {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    section:not(.active) .header {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+	.terminal-line {
+	display: block;
+	visibility: hidden;
+	white-space: pre-wrap;
+	}
+	.terminal-line {
+    display: block;
+    visibility: hidden;
+    white-space: pre-wrap;
+	}
+
   </style>
 </head>
 
 <body>
   <div class="container">
     <header>
-      <h1>&gt; yourname@portfolio:~$</h1>
+      <h1>&gt; htinaunglu@mui0:~$</h1>
       <nav>
-        <a onclick="showSection('about', '> WHOAMI')">ABOUT</a>
-        <a onclick="showSection('experience', '> EXPERIENCE')">EXPERIENCE</a>
-        <a onclick="showSection('projects', '> ACTIVITY')">ACTIVITY</a>
-        <a onclick="showSection('contact', '> CONTACT')">CONTACT</a>
+        <a onclick="showSection('about', '> WHOAMI', 'whoami')">ABOUT</a>
+        <a onclick="showSection('experience', '> EXPERIENCE', 'cat /usr/experience')">EXPERIENCE</a>
+        <a onclick="showSection('projects', '> ACTIVITY', 'show /etc/activities')">ACTIVITY</a>
+        <a onclick="showSection('contact', '> CONTACT', 'ping myname -c 1337')">CONTACT</a>
       </nav>
     </header>
 
     <section id="about" class="active">
-      <h2><span id="header-about"></span><span class="cursor"></span></h2>
+      <h2><span class="header" id="header-about"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
+        <div id="cmd-about" class="command-line"></div>
         <p class="terminal-line">
-          I’m <span class="highlight">Your Name</span>, a cybersecurity consultant with strong skills in penetration testing, red teaming, and vulnerability management. I enjoy solving complex problems and continuously learning through real-world experience and CTF competitions.
+          I’m <span class="highlight">Htin Aung Lu</span>, also known as <span class="highlight">"Mui0"</span> in the cybersecurity field, a cybersecurity consultant with strong skills in penetration testing, red teaming, and vulnerability management. I enjoy solving complex problems and continuously learning through real-world experience and CTF competitions. I am also active on Hackthebox and Tryhackme! Recently, I even get Platinum tier on HTB's season 7 "VICE".
         </p>
       </div>
     </section>
 
     <section id="experience">
-      <h2><span id="header-experience"></span><span class="cursor"></span></h2>
+      <h2><span class="header" id="header-experience"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
+        <div id="cmd-experience" class="command-line"></div>
         <ul>
-          <li class="terminal-line"><strong>Security Consultant</strong> @ Telecom Co. (2023 - Present)</li>
-          <li class="terminal-line"><strong>Web Developer</strong> @ Myanmar Co., Ltd. (2022)</li>
-          <li class="terminal-line"><strong>CTF Team Co-founder</strong> & National Representative – ASEAN-Japan Cyber SEA Games</li>
+          <li class="terminal-line"><strong>Security Consultant (Securelife)</strong> @ MPT-KSGM Joint Operations.</li>
+          <li class="terminal-line"><strong>Backend Developement and Operation</strong> @ EngineerForce Inc.</li>
+          <li class="terminal-line"><strong>CTF Team Co-founder</strong> & MDY-L33ts.</li>
         </ul>
       </div>
     </section>
 
     <section id="projects">
-      <h2><span id="header-projects"></span><span class="cursor"></span></h2>
+      <h2><span class="header" id="header-projects"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
+        <div id="cmd-projects" class="command-line"></div>
         <ul>
-          <li class="terminal-line">Monthly Top 10 @ HackTheBox / TryHackMe</li>
-          <li class="terminal-line">Security awareness trainer for 500+ employees</li>
-          <li class="terminal-line">Built and maintained Python-based recon tools</li>
-          <li class="terminal-line">Joined MetaCTF, Advent of Cyber, internal red team ops</li>
+          <p class="terminal-line"><a>Local Top 3 @ HackTheBox</a></p>
+          <p class="terminal-line">Security awareness trainer for 4000+ employees</p>
+          <p class="terminal-line">Built and maintained Python-based recon tools</p>
+          <p class="terminal-line">Joined MetaCTF, Advent of Cyber, internal red team ops</p>
         </ul>
       </div>
     </section>
 
     <section id="contact">
-      <h2><span id="header-contact"></span><span class="cursor"></span></h2>
+      <h2><span class="header" id="header-contact"></span><span class="cursor"></span></h2>
       <div class="terminal-box">
+        <div id="cmd-contact" class="command-line"></div>
         <p class="terminal-line">Email: <a href="mailto:you@example.com">you@example.com</a></p>
-        <p class="terminal-line">GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-        <p class="terminal-line">LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-        <p class="terminal-line"><a href="Your_Resume.pdf" target="_blank">📄 Download My Resume (PDF)</a></p>
+        <p class="terminal-line">GitHub: <a href="https://github.com/htinaunglu" target="_blank">github.com/htinaunglu</a></p>
+        <p class="terminal-line">LinkedIn: <a href="https://linkedin.com/in/htinaunglu" target="_blank">linkedin.com/in/htinaunglu</a></p>
+
       </div>
     </section>
 
     <div class="footer">
-      &copy; 2025 Your Name — Built with 💻 & Vanilla HTML/CSS
+      &copy; 2025 © Mustala — Built with 💔
     </div>
   </div>
 
-  <script>
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_!@#$%^&*";
+	<script>
+	  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_!@#$%^&*";
 
-    function animateHeader(id, text) {
-      const el = document.getElementById(`header-${id}`);
-      let frame = 0;
-      const interval = setInterval(() => {
-        let output = "";
-        for (let i = 0; i < text.length; i++) {
-          if (i < frame) {
-            output += text[i];
-          } else {
-            output += characters[Math.floor(Math.random() * characters.length)];
-          }
-        }
-        el.textContent = output;
-        frame++;
-        if (frame > text.length) clearInterval(interval);
-      }, 75);
-    }
+	  function animateHeader(id, text) {
+		const el = document.getElementById(`header-${id}`);
+		let frame = 0;
+		const interval = setInterval(() => {
+		  let output = "";
+		  for (let i = 0; i < text.length; i++) {
+			if (i < frame) {
+			  output += text[i];
+			} else {
+			  output += characters[Math.floor(Math.random() * characters.length)];
+			}
+		  }
+		  el.textContent = output;
+		  frame++;
+		  if (frame > text.length) {
+			clearInterval(interval);
+		  }
+		}, 75);
+	  }
 
-    function showSection(id, headerText) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      animateHeader(id, headerText);
-    }
+	  function typeCommand(id, command, callback) {
+		const el = document.getElementById(`cmd-${id}`);
+		let i = 0;
+		el.textContent = "user@localhost:~$ ";
+		const interval = setInterval(() => {
+		  el.textContent = "user@localhost:~$ " + command.slice(0, i);
+		  i++;
+		  if (i > command.length) {
+			clearInterval(interval);
+			if (callback) callback();
+		  }
+		}, 100);
+	  }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      showSection('about', '> WHOAMI');
-    });
-  </script>
+	  function showTerminalLinesSequentially(id) {
+		const lines = document.querySelectorAll(`#${id} .terminal-line`);
+		let index = 0;
+		function showNextLine() {
+		  if (index < lines.length) {
+			lines[index].style.visibility = 'visible';
+			index++;
+			setTimeout(showNextLine, 100);
+		  }
+		}
+		showNextLine();
+	  }
+
+	  function showSection(id, headerText, command) {
+		document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+		document.querySelectorAll('.terminal-line').forEach(el => el.style.visibility = 'hidden');
+
+		document.getElementById(id).classList.add('active');
+		animateHeader(id, headerText);
+		typeCommand(id, command, () => {
+		  showTerminalLinesSequentially(id);
+		});
+	  }
+
+	  document.addEventListener("DOMContentLoaded", () => {
+		showSection('about', '> WHOAMI', 'whoami');
+	  });
+	</script>
+
 </body>
-
 </html>
