@@ -106,6 +106,17 @@
       position: relative;
       overflow: hidden;
     }
+    .terminal-box.before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 120%;
+      height: 100%;
+      background: black;
+      transform: skewX(-6deg);
+      z-index: -1;
+    }
 
     .command-line {
       color: #00ff88;
@@ -292,7 +303,9 @@
 
     const katakana = 'アカサタナハマヤラワンイキシチニヒミリウクスツヌフムユルエケセテネヘメレオコソトノホモヨロ';
     const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    const chars = katakana + latin;
+    const myanamar = 'ကခဂဃငစဆဇဈညဋဌဍဏတထဒဓနပဖဗဘမယရလဝသဟဠအ၀၁၂၃၄၅၆၇၈၉၀';
+    const burmanese = '၀၁၂၃၄၅၆၇၈၉၀';
+    const chars = myanamar ;
 
     const fontSize = 16;
     const columns = canvas.width / fontSize;
